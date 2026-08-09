@@ -1,68 +1,156 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<title>profile</title>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Profile</title>
+
 <style>
-h1{
-            background-color:#FF2400;
-            color:white;
-            padding:20px;
-            border-radius:10px;
-        }
-div{
-            width:600px;
-            height:600px;
-            border:3px solid black;
-            border-radius:25px;
-            background-color:#F3E0AC;
-        }
-input{
-            padding:10px;
-            width:300px;
-            height:25px;
-            border-radius:25px;
-            border:3px solid #37FD12;
-        }
-#Name{
-font-size:25px;
-font-color:black;
+
+body{
+    background-color:#E6EEF1;
+    font-family:Arial, sans-serif;
 }
- button{
-            width:100px;
-            height:40px;
-            border-radius:25px;
-            border:3px solid black;
-            background-color:#01FFFF;
-        }
-        button:hover{
-            background-color:#37FD12;
-        }
+
+h1{
+    background-color:#FF2400;
+    color:white;
+    padding:20px;
+    border-radius:10px;
+    text-align:center;
+}
+
+button{
+    width:150px;
+    height:40px;
+    border-radius:25px;
+    border:3px solid black;
+    background-color:#01FFFF;
+    cursor:pointer;
+}
+
+button:hover{
+    background-color:#37FD12;
+}
+
+.profile-box{
+    width:600px;
+    min-height:600px;
+    border:3px solid black;
+    border-radius:25px;
+    background-color:#F3E0AC;
+    margin:30px auto;
+    padding:30px;
+}
+
+input{
+    padding:10px;
+    width:300px;
+    height:25px;
+    border-radius:25px;
+    border:3px solid #37FD12;
+}
+
+h3{
+    padding:10px;
+}
+
 </style>
+
 </head>
+
 <body>
+
 <h1>Profile</h1>
-<button onclick="window.location.href='food delivery app.html'">&rarr;Back To Home</button>
+
+<center>
+
+<button onclick="window.location.href='food delivery app.html'">
+    ← Back To Home
+</button>
+
+</center>
+
+<div class="profile-box">
+
+<h3>Full Name:</h3>
+
+<input type="text" id="profileName" placeholder="Name...">
+
 <hr>
-<div>
-<br><br>
-<label id="Name">Full Name:</label>
-<input type="text" placeholder="Name...">
-<hr>
+
 <h3>Mobile Number:</h3>
+
+<p id="mobile">Not Available</p>
+
 <hr>
+
 <h3>Email Address:</h3>
+
+<p id="email">Not Available</p>
+
 <hr>
-<h3>Date of Birth:<h3>
+
+<h3>Date of Birth:</h3>
+
+<p id="birth">Not Available</p>
+
 <hr>
+
 <h3>Gender:</h3>
+
+<p id="gender">Not Available</p>
+
 <hr>
+
 <h3>Favorite Restaurants</h3>
+
+<p>Not Available</p>
+
 <hr>
+
 <h3>Favorite Foods</h3>
+
+<p>Not Available</p>
+
 <hr>
+
 <h3>Order History</h3>
+
+<p>View your orders from the Orders page.</p>
+
 <hr>
+
 <h3>Ratings & Reviews</h3>
-<hr>
+
+<p>Not Available</p>
+
 </div>
+
+
+<script>
+
+document.getElementById("profileName").value =
+localStorage.getItem("name") || "";
+
+document.getElementById("mobile").innerText =
+localStorage.getItem("mobile") || "Not Available";
+
+document.getElementById("email").innerText =
+localStorage.getItem("email") || "Not Available";
+
+document.getElementById("birth").innerText =
+localStorage.getItem("birth") || "Not Available";
+
+document.getElementById("gender").innerText =
+localStorage.getItem("gender") || "Not Available";
+
+</script>
+
 </body>
-</html>
+
+</h
